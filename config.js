@@ -1,4 +1,4 @@
-Barakat TajudeenSystemJS.config({
+SystemJS.config({
   baseURL:'https://unpkg.com/',
   defaultExtension: true,
   packages: {

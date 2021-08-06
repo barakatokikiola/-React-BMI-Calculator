@@ -39,5 +39,5 @@ class Main extends React.Component {
 
 ReactDOM.render(
   <Main/>,
-  document.getElementById('react-app')
+  document.getElementById('reactapp')
 );
