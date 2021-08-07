@@ -1,12 +1,12 @@
 body{
-  background:#D8D9D9EB;
+  background:#fff;
   margin: 0;
   padding:0;
 }
 #container{
   background:inherit;
   border-radius: 20px;
-  box-shadow: 1px 1px 20px pink;
+  box-shadow: 0px 5px 5px #161B5A;
   margin:30px;
   max-height:100%;
   position:absolute;
@@ -15,11 +15,11 @@ body{
 }
 
 h1{
-  color:#1F245B;
+  color:#3C4387;
 }
 #button {
   display:inline-block;
-  background-image:linear-gradient(to left, pink,azure);
+  background-image:linear-gradient(to left, #1E2FE0,azure);
   border:none;
   border-radius:30px;
   font-weight:600;
@@ -29,7 +29,7 @@ h1{
 }
   
 #button:hover{
-  box-shadow: 1px 1px 5px red;
+  box-shadow: 1px 1px 5px #0B18A4;
 }
 h4 {
   font-size: 15px;
@@ -42,7 +42,7 @@ h4 {
   display: block;
   outline:none;
   margin: 0 auto;
-  background-color: #AFB1C412;
+  background-color: transparent;
   text-align: center;
   border-bottom:solid 1px #384090;
   width:100px;
@@ -52,6 +52,6 @@ h4 {
   transition:0.5s;
 }
 #info{
-  padding: 12px;
-  color:brown;
+  padding: 10px;
+  color:#111759;
 }

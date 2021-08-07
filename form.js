@@ -20,12 +20,16 @@ class Form extends React.Component {
     
     //Calculates user BMI and Shows the BMI range
     bmiCalc=(event)=>{
-      event.preventDefault();
-      let bmi = this.state.weight / (this.state.height/100 * this.state.height/100);
+      let height = this.state.height
+      let weight = this.state.weight
+      let bmi = weight/ (height/100 * height/100);
       let bmiOutput= bmi.toFixed(2);
-      document.getElementById('result').textContent = "Your bmi is " + bmiOutput + 'kg/m²';
+        let bmiO = `Your BMI is ${bmiOutput}
+      kg/m²`;
+    document.getElementById('result').textContent = bmiO;
       
       let a = "BMI Range : ";
+ 
       if(bmiOutput < 18.5){
       document.getElementById('bmiRange').textContent = a + "Underweight";
       } else if (bmiOutput === 18.5 || bmiOutput < 25 ) {
@@ -49,7 +53,7 @@ class Form extends React.Component {
     render() {
        return (
          <div id ='container'>
-         <form onSubmit ={this.bmiCalc}>
+         <form>
             <h1>BMI CALCULATOR</h1>
           <h4> Height</h4>
            <input type='text' name="height" class= 'inputed' id = 'height' onChange={this.userInputHandler}
@@ -57,7 +61,7 @@ class Form extends React.Component {
          <h4>  Weight </h4>
            <input type='text' name ='weight' class= 'inputed' id='weight' onChange={this.userInputHandler}
              />
-           <input type = 'submit' id= "button" value = 'Get BMI'/>
+           <input type = 'button' onClick = {this.bmiCalc} id= "button" value = 'Get BMI'/>
                           <input type = 'button' id = 'button' onClick={this.resetHandler}value = 'Reset'/>
                 <p id = 'result'></p>
                 <h4 id='bmiRange'></h4>
